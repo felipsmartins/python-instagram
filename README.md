@@ -52,8 +52,7 @@ Once you have an access token (whether via the script or from the user flow), yo
 ``` python
 from instagram.client import InstagramAPI
 
-access_token = "YOUR_ACCESS_TOKEN"
-api = InstagramAPI(access_token=access_token)
+api = InstagramAPI(client_id="YOUR_CLIENT_ID", access_token="YOUR_ACCESS_TOKEN")
 recent_media, next_ = api.user_recent_media(user_id="userid", count=10)
 for media in recent_media:
    print media.caption.text
